@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #faf8ff, #d8d1f3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .container {
+    text-align: center;
+    position: relative;
+  }
+  
+  .envelope {
+    width: 350px;
+    height: 200px;
+    background: #bba6dd;
+    margin: auto;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+  
+  .envelope .flap {
+    width: 0;
+    height: 0;
+    border-left: 175px solid transparent;
+    border-right: 175px solid transparent;
+    border-bottom: 100px solid #8765aa;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    transform-origin: top center;
+    transition: transform 0.6s ease;
+  }
+  
+  .envelope .front {
+    width: 100%;
+    height: 200px;
+    background: #d3c2f2;
+    position: absolute;
+    top: 0;
+  }
+  
+  .open-button {
+    background: #bba6dd;
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    margin-top: 30px;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .open-button:hover {
+    background: #8765aa;
+  }
+  
+  .card {
+    width: 250px;
+    height: 150px;
+    background: #f3e7fd;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    display: none;
+    animation: slide-in 1s forwards;
+    background-size: cover;
+    background-position: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+  }
+  
+  .card p {
+    margin: 0;
+    color: #5d4c8e;
+    font-weight: bold;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+  }
+  
+  .card .ornaments {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    z-index: -1;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
